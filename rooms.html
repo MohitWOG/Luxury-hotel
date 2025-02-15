@@ -14,22 +14,51 @@
         body {
             background-color: #f5f5f5;
             text-align: center;
+            overflow-x: hidden;
         }
+
+        /* Background Video */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
         .container {
             width: 80%;
             margin: auto;
             padding: 20px;
+            position: relative;
+            z-index: 1;
         }
+
+        /* RGB Animation */
+        @keyframes rgbGlow {
+            0% { color: red; }
+            25% { color: blue; }
+            50% { color: green; }
+            75% { color: yellow; }
+            100% { color: red; }
+        }
+
         h1 {
             margin-bottom: 20px;
-            color: #333;
+            font-size: 40px;
+            font-weight: bold;
+            animation: rgbGlow 3s infinite linear;
         }
+
         .rooms {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             justify-content: center;
         }
+
         .room {
             background: white;
             padding: 20px;
@@ -37,23 +66,28 @@
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
         }
+
         .room:hover {
             transform: translateY(-5px);
         }
+
         .room img {
             width: 100%;
             height: 200px;
             object-fit: cover;
             border-radius: 8px;
         }
+
         .room h2 {
             margin: 15px 0 10px;
             color: #222;
         }
+
         .room p {
             font-size: 18px;
             color: #555;
         }
+
         .book-btn {
             display: inline-block;
             margin-top: 10px;
@@ -64,12 +98,18 @@
             border-radius: 5px;
             font-size: 16px;
         }
+
         .book-btn:hover {
             background: darkorange;
         }
     </style>
 </head>
 <body>
+
+    <video class="video-bg" autoplay loop muted playsinline>
+        <source src="rooms.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
     <div class="container">
         <h1>Explore Our Rooms</h1>
@@ -90,6 +130,24 @@
                 <img src="room3.jpg" alt="Standard Room">
                 <h2>Standard Room</h2>
                 <p>₹2000 per night</p>
+                <a href="booking.html" class="book-btn">Book Now</a>
+            </div>
+            <div class="room">
+                <img src="room4.jpg" alt="Basic Room">
+                <h2>Basic Room</h2>
+                <p>₹1000 per night</p>
+                <a href="booking.html" class="book-btn">Book Now</a>
+            </div>
+            <div class="room">
+                <img src="room5.jpg" alt="2 Beds Room">
+                <h2>2 Beds Room</h2>
+                <p>₹800 per night</p>
+                <a href="booking.html" class="book-btn">Book Now</a>
+            </div>
+            <div class="room">
+                <img src="room6.jpg" alt="Professional Suite">
+                <h2>Professional Suite</h2>
+                <p>₹7000 per night</p>
                 <a href="booking.html" class="book-btn">Book Now</a>
             </div>
         </div>

@@ -1,0 +1,360 @@
+/* General Styles */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #111;
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background: url('banner.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.book-button, .know-button {
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #ff6b6b, #ffa502);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.book-button:hover, .know-button:hover {
+    box-shadow: 0 0 15px #ffa502;
+}
+
+/* About Us */
+.about-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about-image img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* Amenities */
+.amenities {
+    text-align: center;
+    padding: 40px;
+    background: #222;
+}
+
+.amenities-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.amenity {
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+/* Navigation Bar */
+/* Navigation Bar */
+.top-nav {
+    position: relative;
+    top: 20px;
+    right: 80px;
+    z-index: 100; /* Ensures it stays above the hero section */
+}
+
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Optional background for visibility */
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.top-nav ul li {
+    display: inline;
+}
+
+.top-nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.top-nav ul li a:hover{
+    color: #ff9800;
+}
+
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    margin-top: 50px;
+    padding: 50px 0;
+    background: #111;
+}
+
+.testimonials h2 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.testimonial-container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial-slider {
+    display: flex;
+    gap: 30px;
+    width: 500%;
+    animation: scrollTestimonials 50s linear infinite;
+}
+
+.testimonial {
+    min-width: 25%;
+    background: #222;
+    padding: 40px;
+    border-radius: 15px;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    height: 250px;  /* Increased height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial:hover {
+    transform: scale(1.02);
+}
+
+.testimonial img {
+    width: 90px; /* Slightly bigger */
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.testimonial p {
+    font-style: italic;
+    font-size: 22px; /* Increased font size for readability */
+    margin-bottom: 15px;
+}
+
+.testimonial h4 {
+    font-size: 20px;
+    color: #ff9800;
+}
+
+/* Animation */
+@keyframes scrollTestimonials {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.6);
+    position : fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.logo-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.logo span{
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    }
+    
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px; /* Adjust width as needed */
+}
+
+::-webkit-scrollbar-track {
+    background: #111; /* Matches background */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff9800; /* Scrollbar color */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffa502; /* Hover effect */
+}
+
+html, body {
+    overflow: hidden; /* Hides both horizontal and vertical scrollbars */
+    height: 100%;
+}
+
+/* Enable scrolling inside sections if needed */
+.main-content {
+    overflow-y: auto;
+    height: 100vh;
+    padding-right: 10px; /* Prevents content from shifting when the scrollbar is removed */
+}
+
+/* Optional: Remove horizontal scrolling */
+body {
+    overflow-x: hidden;
+}
+
+/* Hide Scrollbar but Keep Scrolling */
+html, body {
+    overflow-y: scroll; /* Enables vertical scrolling */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hides scrollbar in Internet Explorer/Edge */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome, Safari, and Edge */
+}
+
+/* Ensure sections are properly positioned */
+#book-today, #checkout-rooms, #about-us {
+    scroll-margin-top: 100px; /* Ensures sections appear correctly after clicking */
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fix Button Position */
+.fixed-buttons {
+    position: fixed;
+    top: 20px; /* Ensures buttons stay on top */
+    right: 50px;
+    z-index: 1000;
+    display: flex;
+    gap: 15px;
+}
+
+.fixed-buttons button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #ff6b6b, #ffa502);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fixed-buttons button:hover {
+    box-shadow: 0 0 15px #ffa502;
+}
+
+/* Hero Section with Horizontal Scrolling Background */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%; /* 5 images, so 5x the width */
+    height: 100%;
+    display: flex;
+    animation: scrollBackground 45s linear infinite;
+}
+
+.hero-bg-container img {
+    width: 20%; /* Each image takes 20% of the container */
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Background Scroll Animation */
+@keyframes scrollBackground {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); } /* Scrolls all images */
+}
